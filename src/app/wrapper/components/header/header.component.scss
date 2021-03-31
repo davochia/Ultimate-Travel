@@ -1,0 +1,23 @@
+@import '../../shared/style/mixins';
+@import '../../shared/style/variables';
+
+.jumbotron {
+  @include zero-margin(70px, 30px);
+  background: $primay;
+  color: white;
+  min-height: 150px;
+}
+
+.bk {
+  background: $primay;
+}
+
+.active {
+  background: lighten($primary-text, 10);
+}
+
+a {
+  margin-right: 20px;
+  color: $text-icon;
+  text-decoration: none;
+}
