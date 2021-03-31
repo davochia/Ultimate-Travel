@@ -5,6 +5,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatIconModule} from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatCardModule} from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from '../app-routing.module'; 
 
@@ -16,9 +20,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { WrapperComponent } from './wrapper/wrapper.component';
 import { LoginComponent } from './components/login/login.component';
 import { MatListModule } from '@angular/material/list';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { OutToursComponent } from './components/out-tours/out-tours.component';
+import { BlogComponent } from './components/blog/blog.component';
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, ContactComponent, HeaderComponent, FooterComponent, WrapperComponent, LoginComponent],
+  declarations: [HomeComponent, AboutComponent, ContactComponent, HeaderComponent, FooterComponent, WrapperComponent, LoginComponent, GalleryComponent, OutToursComponent, BlogComponent],
   imports: [
     BrowserModule,
     CommonModule,
@@ -28,8 +35,11 @@ import { MatListModule } from '@angular/material/list';
     MatFormFieldModule,
     FormsModule,
     MatListModule,
-    AppRoutingModule
-
+    AppRoutingModule,
+    MatTabsModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatCardModule
   ],
   exports: [WrapperComponent],
   entryComponents: [
