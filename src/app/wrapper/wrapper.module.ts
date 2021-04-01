@@ -17,15 +17,16 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { WrapperComponent } from './wrapper/wrapper.component';
+import { WrapperComponent } from './wrapper.component';
 import { LoginComponent } from './components/login/login.component';
 import { MatListModule } from '@angular/material/list';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { OutToursComponent } from './components/out-tours/out-tours.component';
 import { BlogComponent } from './components/blog/blog.component';
+import { CardsComponent } from './components/card/cards/cards.component';
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, ContactComponent, HeaderComponent, FooterComponent, WrapperComponent, LoginComponent, GalleryComponent, OutToursComponent, BlogComponent],
+  declarations: [HomeComponent, AboutComponent, ContactComponent, HeaderComponent, FooterComponent, WrapperComponent, LoginComponent, GalleryComponent, OutToursComponent, BlogComponent, CardsComponent],
   imports: [
     BrowserModule,
     CommonModule,

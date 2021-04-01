@@ -1,19 +1,31 @@
-@import '../../shared/style/mixins';
-@import '../../shared/style/variables';
+@import '../../../shared/style/mixins';
+@import '../../../shared/style/variables';
 
 .footer {
-  background-color: $dark-primary;
+  background-color: $primary-text;
   @include zero-margin(20px, 0px);
+  color: $text-icon;
 }
+
+.active {
+  color: $text-icon;
+}
+
+a {
+  margin-right: 20px;
+  color: $light-primay;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: $text-icon;
+}
+
 
 .btn-facebook {
   color: #fff !important;
   background-color: #3b5998 !important;
-}
-
-.btn-google-plus {
-  color: #fff !important;
-  background-color: #dd4b39 !important;
 }
 
 .btn-youtube {
