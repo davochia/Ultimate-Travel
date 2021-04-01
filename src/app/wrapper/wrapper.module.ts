@@ -24,9 +24,10 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { OutToursComponent } from './components/out-tours/out-tours.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { CardsComponent } from './components/card/cards/cards.component';
+import { HighlightDirective } from './Directives/highlight.directive';
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, ContactComponent, HeaderComponent, FooterComponent, WrapperComponent, LoginComponent, GalleryComponent, OutToursComponent, BlogComponent, CardsComponent],
+  declarations: [HomeComponent, AboutComponent, ContactComponent, HeaderComponent, FooterComponent, WrapperComponent, LoginComponent, GalleryComponent, OutToursComponent, BlogComponent, CardsComponent, HighlightDirective],
   imports: [
     BrowserModule,
     CommonModule,

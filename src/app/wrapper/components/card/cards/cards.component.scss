@@ -4,17 +4,21 @@
 //   gap: 10px;
 // }
 
-.larger {
+.text-larger {
   font-size: 50px;
   margin-top: 10px;
   line-height: 3rem;
 }
 
-.large {
+.text-large {
   font-size: 18px;
   margin-top: 20px;
   line-height: 2rem;
   font-weight: 200;
-  word-spacing: 3px;
   text-align: justify;
+}
+
+.card-wh {
+  max-width: 20rem;
+  max-height: 250px;
 }
