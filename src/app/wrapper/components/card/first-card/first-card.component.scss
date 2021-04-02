@@ -1,0 +1,24 @@
+// .card-wrapper {
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   gap: 10px;
+// }
+
+.text-larger {
+  font-size: 50px;
+  margin-top: 10px;
+  line-height: 3rem;
+}
+
+.text-large {
+  font-size: 18px;
+  margin-top: 20px;
+  line-height: 2rem;
+  font-weight: 200;
+  text-align: justify;
+}
+
+.card-wh {
+  max-width: 20rem;
+  max-height: 250px;
+}

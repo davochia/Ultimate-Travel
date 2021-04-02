@@ -1,3 +1,29 @@
+@import '../../../shared/style/mixins';
+@import '../../../shared/style/variables';
+
+
+.jumbotron {
+  @include zero-margin(70px, 40px);
+  background: url("../../../../assets/ballons.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $text-icon;
+  position: relative;
+  height: 500px;
+  min-height: 150px;
+}
+
+.jumbotron h1 {
+  font-size: 50px;
+  line-height: 3rem;
+}
+
+.jumbotron p {
+  font-size: large;
+}
+
+
+
 .full-width {
   width: 95%;
 }
@@ -8,4 +34,28 @@
 
 .form-size {
   width: 75%;
+}
+
+.card-wm {
+  max-width: 30%;
+  margin: 10px;
+}
+
+.text-larger {
+  font-size: 50px;
+  margin-top: 10px;
+  line-height: 3rem;
+}
+
+.text-large {
+  font-size: 18px;
+  margin-top: 20px;
+  line-height: 2rem;
+  font-weight: 200;
+  text-align: justify;
+}
+
+.card-wh {
+  max-width: 20rem;
+  max-height: 250px;
 }

@@ -1,0 +1,23 @@
+@import '../../../../shared/style/mixins';
+@import '../../../../shared/style/variables';
+
+
+.jumbotron {
+  @include zero-margin(70px, 40px);
+  background: url("../../../../../assets/pool.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $text-icon;
+  position: relative;
+  height: 500px;
+  min-height: 150px;
+}
+
+.jumbotron h1 {
+  font-size: 50px;
+  line-height: 3rem;
+}
+
+.jumbotron p {
+  font-size: large;
+}

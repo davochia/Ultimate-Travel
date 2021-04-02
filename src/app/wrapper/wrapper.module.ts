@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -15,7 +15,8 @@ import { AppRoutingModule } from '../app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from './components/headers/header/header.component';
+import { NavigationComponent } from './components/headers/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WrapperComponent } from './wrapper.component';
 import { LoginComponent } from './components/login/login.component';
@@ -25,9 +26,15 @@ import { OutToursComponent } from './components/out-tours/out-tours.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { CardsComponent } from './components/card/cards/cards.component';
 import { HighlightDirective } from './Directives/highlight.directive';
+import { HomeCardComponent } from './components/card/home-card/home-card.component';
+import { ContactCardComponent } from './components/card/contact-card/contact-card.component';
+import { FirstCardComponent } from './components/card/first-card/first-card.component';
+import { SecondCardComponent } from './components/card/second-card/second-card.component';
+import { ThirdCardComponent } from './components/card/third-card/third-card.component';
+import { ForthCardComponent } from './components/card/forth-card/forth-card.component';
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, ContactComponent, HeaderComponent, FooterComponent, WrapperComponent, LoginComponent, GalleryComponent, OutToursComponent, BlogComponent, CardsComponent, HighlightDirective],
+  declarations: [HomeComponent, AboutComponent, ContactComponent, HeaderComponent,NavigationComponent, FooterComponent, WrapperComponent, LoginComponent, GalleryComponent, OutToursComponent, BlogComponent, CardsComponent, HighlightDirective, HomeCardComponent, ContactCardComponent, FirstCardComponent, SecondCardComponent, ThirdCardComponent, ForthCardComponent],
   imports: [
     BrowserModule,
     CommonModule,
@@ -41,7 +48,8 @@ import { HighlightDirective } from './Directives/highlight.directive';
     MatTabsModule,
     MatIconModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    ReactiveFormsModule
   ],
   exports: [WrapperComponent],
   entryComponents: [
