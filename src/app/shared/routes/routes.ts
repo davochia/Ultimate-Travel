@@ -5,12 +5,13 @@ import { Routes } from '@angular/router';
 import { AboutComponent } from '../../wrapper/components/about/about.component';
 import { ContactComponent } from '../../wrapper/components/contact/contact.component';
 import { HomeComponent } from '../../wrapper/components/home/home.component';
+import { OurToursComponent } from 'src/app/wrapper/components/our-tours/our-tours.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'tours', component: OutToursComponent},
+  {path: 'tours', component: OurToursComponent},
   {path: 'gallery', component: GalleryComponent},
   {path: 'blog', component: BlogComponent},
   {path: 'contact', component: ContactComponent},

@@ -32,9 +32,14 @@ import { FirstCardComponent } from './components/card/first-card/first-card.comp
 import { SecondCardComponent } from './components/card/second-card/second-card.component';
 import { ThirdCardComponent } from './components/card/third-card/third-card.component';
 import { ForthCardComponent } from './components/card/forth-card/forth-card.component';
+import { OurToursComponent } from './components/our-tours/our-tours.component';
+import { TestimonyComponent } from './components/carousel/testimony/testimony.component';
+import { DestinationsComponent } from './components/carousel/destinations/destinations.component';
+import { WhyUsComponent } from './components/card/why-us/why-us.component';
+import { OurTeamComponent } from './components/about/our-team/our-team.component';
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, ContactComponent, HeaderComponent,NavigationComponent, FooterComponent, WrapperComponent, LoginComponent, GalleryComponent, OutToursComponent, BlogComponent, CardsComponent, HighlightDirective, HomeCardComponent, ContactCardComponent, FirstCardComponent, SecondCardComponent, ThirdCardComponent, ForthCardComponent],
+  declarations: [HomeComponent, AboutComponent, ContactComponent, HeaderComponent,NavigationComponent, FooterComponent, WrapperComponent, LoginComponent, GalleryComponent, OutToursComponent, BlogComponent, CardsComponent, HighlightDirective, HomeCardComponent, ContactCardComponent, FirstCardComponent, SecondCardComponent, ThirdCardComponent, ForthCardComponent, OurToursComponent, TestimonyComponent, DestinationsComponent, WhyUsComponent, OurTeamComponent],
   imports: [
     BrowserModule,
     CommonModule,
