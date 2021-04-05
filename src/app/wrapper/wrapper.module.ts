@@ -22,7 +22,6 @@ import { WrapperComponent } from './wrapper.component';
 import { LoginComponent } from './components/login/login.component';
 import { MatListModule } from '@angular/material/list';
 import { GalleryComponent } from './components/gallery/gallery.component';
-import { OutToursComponent } from './components/out-tours/out-tours.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { CardsComponent } from './components/card/cards/cards.component';
 import { HighlightDirective } from './Directives/highlight.directive';
@@ -39,7 +38,7 @@ import { WhyUsComponent } from './components/card/why-us/why-us.component';
 import { OurTeamComponent } from './components/about/our-team/our-team.component';
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, ContactComponent, HeaderComponent,NavigationComponent, FooterComponent, WrapperComponent, LoginComponent, GalleryComponent, OutToursComponent, BlogComponent, CardsComponent, HighlightDirective, HomeCardComponent, ContactCardComponent, FirstCardComponent, SecondCardComponent, ThirdCardComponent, ForthCardComponent, OurToursComponent, TestimonyComponent, DestinationsComponent, WhyUsComponent, OurTeamComponent],
+  declarations: [HomeComponent, AboutComponent, ContactComponent, HeaderComponent,NavigationComponent, FooterComponent, WrapperComponent, LoginComponent, GalleryComponent, BlogComponent, CardsComponent, HighlightDirective, HomeCardComponent, ContactCardComponent, FirstCardComponent, SecondCardComponent, ThirdCardComponent, ForthCardComponent, OurToursComponent, TestimonyComponent, DestinationsComponent, WhyUsComponent, OurTeamComponent],
   imports: [
     BrowserModule,
     CommonModule,

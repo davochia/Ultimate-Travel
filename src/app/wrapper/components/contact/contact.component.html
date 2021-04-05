@@ -1,52 +1,96 @@
-<div class="jumbotron"
-    fxLayout="column"
-    fxLayout.sm="column" 
-    fxLayout.xs="column" 
-    fxLayoutAlign.xs="start center"
-    fxLayoutAlign.sm="start center" 
-    fxLayoutAlign.gt-sm="center center" 
-    fxLayoutGap="40px">
-
-    
-
-    <div fxFlex>
-      <h1 class="display-4">Talk To Us</h1>
-    </div>
+<div
+  class="jumbotron"
+  fxLayout="column"
+  fxLayout.sm="column"
+  fxLayout.xs="column"
+  fxLayoutAlign.xs="start center"
+  fxLayoutAlign.sm="start center"
+  fxLayoutAlign.gt-sm="center center"
+  fxLayoutGap="40px"
+>
+  <div fxFlex>
+    <h1 class="display-4">Talk To Us</h1>
+  </div>
 </div>
 
+<!-- <div class="d-flex flex-column justify-content-center"> -->
+<div class="container">
+  <div class="row">
+    <app-contact-card></app-contact-card>
 
-    <div class="d-flex flex-column justify-content-center">
-
-        <app-contact-card></app-contact-card>
-
-      <div class="form-size mt-5 align-self-center" >
-        <h3 style="font-size: 34px;">Send us your feedback</h3>
-        <form novalidate [formGroup]="feedbackForm" #fform="ngForm" (ngSubmit)="onSubmit()">
+    <div class="col">
+      <div class="form-size mt-5 mx-auto">
+        <h3 style="font-size: 34px">Send us your feedback</h3>
+        <form
+          novalidate
+          [formGroup]="feedbackForm"
+          #fform="ngForm"
+          (ngSubmit)="onSubmit()"
+        >
           <div class="col-auto mb-3">
             <label for="name" class="form-label">Full Name</label>
-            <input formControlName="fullname" type="text" class="form-control" id="name" placeholder="John H. Smith" required>
-              <mat-error *ngIf="formErrors.fullname">{{ formErrors.fullname }}</mat-error>
+            <input
+              formControlName="fullname"
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="John H. Smith"
+              required
+            />
+            <mat-error *ngIf="formErrors.fullname">{{
+              formErrors.fullname
+            }}</mat-error>
           </div>
           <div class="col-auto mb-3">
             <label for="tel" class="form-label">Phone</label>
-            <input formControlName="tel" type="tel" class="form-control" id="tel" placeholder="+1234567890" required>
+            <input
+              formControlName="tel"
+              type="tel"
+              class="form-control"
+              id="tel"
+              placeholder="+1234567890"
+              required
+            />
             <mat-error *ngIf="formErrors.tel">{{ formErrors.tel }}</mat-error>
-        </div>
+          </div>
           <div class="col-auto mb-3">
             <label for="email" class="form-label">Email address</label>
-            <input formControlName="email" type="email" class="form-control" id="email" placeholder="name@example.com" required>
-            <mat-error *ngIf="formErrors.email">{{ formErrors.email }}</mat-error>
-        </div>
+            <input
+              formControlName="email"
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="name@example.com"
+              required
+            />
+            <mat-error *ngIf="formErrors.email">{{
+              formErrors.email
+            }}</mat-error>
+          </div>
           <div class="col-auto mb-3">
             <label for="message" class="form-label">Message</label>
-            <textarea formControlName="message" class="form-control" id="message" rows="12" required></textarea>
-              <mat-error *ngIf="formErrors.message">{{ formErrors.message }}</mat-error>
+            <textarea
+              formControlName="message"
+              class="form-control"
+              id="message"
+              rows="12"
+              required
+            ></textarea>
+            <mat-error *ngIf="formErrors.message">{{
+              formErrors.message
+            }}</mat-error>
           </div>
-          <div class="col-auto ">
-            <button type="submit" class="btn btn-primary text-floral-white mb-3 " [disabled]="feedbackForm.invalid">Submit</button>
+          <div class="col-auto">
+            <button
+              type="submit"
+              class="btn btn-primary text-floral-white mb-3"
+              [disabled]="feedbackForm.invalid"
+            >
+              Submit
+            </button>
           </div>
         </form>
       </div>
     </div>
-  <!-- </div>
- </div> -->
+  </div>
+</div>

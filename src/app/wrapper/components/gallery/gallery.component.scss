@@ -4,7 +4,7 @@
 
 .jumbotron {
   @include zero-margin(70px, 40px);
-  background: url("../../../../assets/ballons.jpg") no-repeat;
+  background: url("../../../../assets/mallorca3.jpg") no-repeat;
   background-position: center;
   background-size: cover;
   color: $text-icon;
@@ -58,4 +58,34 @@
 .card-wh {
   max-width: 20rem;
   max-height: 250px;
+}
+
+
+.overlay-dark {
+  position: relative;
+}
+
+.overlay-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  display: block;
+  opacity: 0.55;
+}
+
+
+.overlay-content {
+  z-index: 99;
+  position: relative;
+}
+
+
+.gallery-nav {
+  a:hover {
+    color: blue;
+  }
 }

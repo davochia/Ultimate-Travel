@@ -4,7 +4,7 @@
 
 .jumbotron {
   @include zero-margin(70px, 40px);
-  background: url("../../../../../assets/pool.jpg") no-repeat;
+  background: url("../../../../../assets/ballons.jpg") no-repeat;
   background-position: center;
   background-size: cover;
   color: $text-icon;
@@ -20,6 +20,7 @@
 
 .jumbotron p {
   font-size: large;
+  line-height: 2rem;
 }
 
 
