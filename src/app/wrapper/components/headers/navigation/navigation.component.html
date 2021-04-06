@@ -21,7 +21,23 @@
           <a mat-button routerLink="home" routerLinkActive="active"> Home</a>
         </li>
         <li class="nav-item">
-          <a mat-button routerLink="about" routerLinkActive="active"> About</a>
+          <a
+            mat-button
+            [matMenuTriggerFor]="aboutTeam"
+            routerLink="about"
+            routerLinkActive="active"
+          >
+            About</a
+          >
+          <mat-menu #aboutTeam="matMenu" yPosition="below">
+            <a
+              mat-button
+              mat-menu-item
+              routerLink="ourteam"
+              routerLinkActive="active"
+              >Our Team</a
+            >
+          </mat-menu>
         </li>
         <li class="nav-item">
           <a mat-button routerLink="tours" routerLinkActive="active">
@@ -38,7 +54,7 @@
         </li>
         <li class="nav-item">
           <a mat-button routerLink="contact" routerLinkActive="active">
-            Contact</a
+            Contact Us</a
           >
         </li>
       </ul>

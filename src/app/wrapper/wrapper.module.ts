@@ -11,6 +11,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from '../app-routing.module'; 
+import {MatMenuModule} from '@angular/material/menu';
 
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
@@ -53,7 +54,8 @@ import { OurTeamComponent } from './components/about/our-team/our-team.component
     MatIconModule,
     MatSidenavModule,
     MatCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatMenuModule
   ],
   exports: [WrapperComponent],
   entryComponents: [

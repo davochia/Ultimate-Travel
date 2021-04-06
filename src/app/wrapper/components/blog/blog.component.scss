@@ -4,7 +4,7 @@
 
 .jumbotron {
   @include zero-margin(70px, 40px);
-  background: url("../../../../assets/ballons.jpg") no-repeat;
+  background: url("../../../../assets/travel.jpg") no-repeat;
   background-position: center;
   background-size: cover;
   color: $text-icon;
@@ -22,8 +22,6 @@
   font-size: large;
 }
 
-
-
 .full-width {
   width: 95%;
 }
@@ -34,11 +32,6 @@
 
 .form-size {
   width: 75%;
-}
-
-.card-wm {
-  max-width: 30%;
-  margin: 10px;
 }
 
 .text-larger {
@@ -55,7 +48,44 @@
   text-align: justify;
 }
 
-.card-wh {
-  max-width: 20rem;
-  max-height: 250px;
+.card-w {
+  max-width: 30rem;
+}
+
+
+.blog-card {
+  //max-width: 70%;
+  background-color: #fff;
+  color: #000;
+}
+
+.blog-header-image {
+  background-image: url('../../../../assets/person1.jpeg');
+  background-size: cover;
+}
+
+.cat a:hover {
+  background: #f8f8ff;
+}
+
+
+.overlay-gradient {
+  position: relative;
+}
+
+.overlay-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #4FC3F7, #8E24AA);
+  display: block;
+  opacity: 0.40;
+}
+
+.overlay-content {
+  z-index: 99;
+  position: relative;
 }
