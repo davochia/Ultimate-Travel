@@ -1,49 +1,66 @@
-<mat-toolbar >
-    Login 
-    <span class="flex-spacer"></span> 
-    <button mat-button mat-dialog-close>&times;</button>
+<mat-toolbar class="bg-dark mb-4">
+  <span>Login</span>
+  <span class="flex-spacer"></span>
+  <button mat-button mat-dialog-close>&times;</button>
 </mat-toolbar>
 
 <form novalidate #loginForm="ngForm" (ngSubmit)="onSubmit()">
-    <mat-dialog-content>
-        <p>
-          <mat-form-field>
-              <input matInput placeholder="Username" type="text" [(ngModel)]="user.username" name="username" #username="ngModel" required>
-              <mat-error *ngIf="username.errors?.required">Username is required</mat-error>
-          </mat-form-field>
-
-          <mat-form-field>
-              <input matInput placeholder="Password" type="password" [(ngModel)]="user.password" name="password" #password="ngModel" required>
-              <mat-error *ngIf="password.errors?.required">password is required</mat-error>
-
-          </mat-form-field>
-
-          <mat-checkbox [(ngModel)]="user.remember" name="remember">Remember Me</mat-checkbox>
-        </p>
-    </mat-dialog-content>
-
-    <mat-dialog-actions>
-        <span class="flex-spacer"></span>
-        <button mat-button mat-dialog-close>Cancel</button>
-        <button mat-button type="submit" class=" text-floral-white" [disabled]="loginForm.form.invalid">Login</button>
-    </mat-dialog-actions>
-
-</form>
-
-<!-- 
-<form>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <label for="userEmail">Email address</label>
+    <input
+      [(ngModel)]="user.username"
+      name="username"
+      #username="ngModel"
+      required
+      type="email"
+      class="form-control"
+      id="userEmail"
+      aria-describedby="emailHelp"
+      placeholder="Enter email or Username"
+    />
+
+    <mat-error *ngIf="username.errors?.required"
+      >Username is required</mat-error
+    >
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <label for="userPassword">Password</label>
+    <input
+      [(ngModel)]="user.password"
+      name="password"
+      #password="ngModel"
+      required
+      type="password"
+      class="form-control"
+      id="userPassword"
+      placeholder="Password"
+    />
+    <mat-error *ngIf="password.errors?.required"
+      >password is required</mat-error
+    >
   </div>
   <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <input
+      [(ngModel)]="user.remember"
+      name="remember"
+      type="checkbox"
+      class="form-check-input"
+      id="userCheck"
+    />
+    <label class="form-check-label" for="userCheck">Remember Me</label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form> -->
+
+  <mat-dialog-actions>
+    <span class="flex-spacer"></span>
+    <button class="btn btn-danger m-2" mat-button mat-dialog-close>
+      Cancel
+    </button>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="loginForm.form.invalid"
+    >
+      Login
+    </button>
+  </mat-dialog-actions>
+</form>

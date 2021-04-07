@@ -16,7 +16,7 @@
       <span class="navbar-toggler-icon bg-light"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-6">
         <li class="nav-item">
           <a mat-button routerLink="home" routerLinkActive="active"> Home</a>
         </li>
@@ -26,10 +26,24 @@
             [matMenuTriggerFor]="aboutTeam"
             routerLink="about"
             routerLinkActive="active"
+            #menuTrigger="matMenuTrigger"
+            (mouseenter)="menuTrigger.openMenu()"
           >
             About</a
           >
-          <mat-menu #aboutTeam="matMenu" yPosition="below">
+          <mat-menu
+            #aboutTeam="matMenu"
+            yPosition="below"
+            [overlapTrigger]="false"
+            (mouseleave)="menuTrigger.closeMenu()"
+          >
+            <a
+              mat-button
+              mat-menu-item
+              routerLink="about"
+              routerLinkActive="active"
+              >About Us</a
+            >
             <a
               mat-button
               mat-menu-item
@@ -60,6 +74,12 @@
       </ul>
 
       <span class="flex-spacer"></span>
+      <li class="nav-item">
+        <a mat-button routerLink="bookings" routerLinkActive="active">
+          <span class="fa fa-cart-arrow-down fa-lg"></span>
+          Bookings</a
+        >
+      </li>
 
       <!-- <form class="form-inline items-inline  p-3">
       <input class="form-control" type="search" placeholder="Location, Hotels, More" aria-label="Search">

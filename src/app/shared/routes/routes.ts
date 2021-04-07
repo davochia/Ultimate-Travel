@@ -1,3 +1,4 @@
+import { BookingsComponent } from './../../wrapper/components/bookings/bookings.component';
 import { BlogComponent } from '../../wrapper/components/blog/blog.component';
 import { GalleryComponent } from '../../wrapper/components/gallery/gallery.component';
 import { Routes } from '@angular/router';
@@ -16,4 +17,5 @@ export const routes: Routes = [
   {path: 'gallery', component: GalleryComponent},
   {path: 'blog', component: BlogComponent},
   {path: 'contact', component: ContactComponent},
+  {path: 'bookings', component: BookingsComponent},
 ];

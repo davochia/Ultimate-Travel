@@ -37,9 +37,13 @@ import { TestimonyComponent } from './components/carousel/testimony/testimony.co
 import { DestinationsComponent } from './components/carousel/destinations/destinations.component';
 import { WhyUsComponent } from './components/card/why-us/why-us.component';
 import { OurTeamComponent } from './components/about/our-team/our-team.component';
+import { BookingsComponent } from './components/bookings/bookings.component';
+import { Team1Component } from './components/about/our-team/team1/team1.component';
+import { Team2Component } from './components/about/our-team/team2/team2.component';
+import { Team3Component } from './components/about/our-team/team3/team3.component';
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, ContactComponent, HeaderComponent,NavigationComponent, FooterComponent, WrapperComponent, LoginComponent, GalleryComponent, BlogComponent, CardsComponent, HighlightDirective, HomeCardComponent, ContactCardComponent, FirstCardComponent, SecondCardComponent, ThirdCardComponent, ForthCardComponent, OurToursComponent, TestimonyComponent, DestinationsComponent, WhyUsComponent, OurTeamComponent],
+  declarations: [HomeComponent, AboutComponent, ContactComponent, HeaderComponent,NavigationComponent, FooterComponent, WrapperComponent, LoginComponent, GalleryComponent, BlogComponent, CardsComponent, HighlightDirective, HomeCardComponent, ContactCardComponent, FirstCardComponent, SecondCardComponent, ThirdCardComponent, ForthCardComponent, OurToursComponent, TestimonyComponent, DestinationsComponent, WhyUsComponent, OurTeamComponent, BookingsComponent, Team1Component, Team2Component, Team3Component],
   imports: [
     BrowserModule,
     CommonModule,

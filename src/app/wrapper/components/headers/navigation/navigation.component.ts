@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { LoginComponent } from '../../login/login.component';
 
 @Component({
@@ -15,7 +15,7 @@ export class NavigationComponent implements OnInit {
   }
 
   openLoginForm(){
-    this.dialog.open(LoginComponent, {width: '600px', height: '400px', backdropClass: 'dialogBackground'});
+    this.dialog.open(LoginComponent, {width: '500px', height: '450px'});
 
   }
 

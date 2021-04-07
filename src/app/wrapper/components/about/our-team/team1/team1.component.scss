@@ -1,0 +1,23 @@
+.txt-background {
+  background-color: black;
+  opacity: 70%;
+  //z-index: -1;
+}
+
+.nopaddingmargin {
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: center;
+}
+
+.card-txt {
+  color: cyan;
+}
+
+.texthover:hover {
+  color: cyan;
+}
+
+.card-width {
+  max-width: 20rem
+}
