@@ -1,1 +1,15 @@
-<p>bookings works!</p>
+<div class="container my-5">
+  <div class="row mx-auto d-flex flex-column gap-5">
+    <h2 class="fs-2 fw-bold text-center">My Bookings</h2>
+
+    <div class="d-flex flex-column gap-3" *ngIf="isLoggedIn">
+      <app-booking-list></app-booking-list>
+      <app-booking-list></app-booking-list>
+      <app-booking-list></app-booking-list>
+    </div>
+
+    <!-- <div *ngIf="!isLoggedIn">
+      <p class="fs-5">Please login to see your bookings</p>
+    </div> -->
+  </div>
+</div>

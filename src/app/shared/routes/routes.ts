@@ -1,3 +1,4 @@
+import { AuthGuardService } from './../../wrapper/services/auth-guard.service';
 import { BookingsComponent } from './../../wrapper/components/bookings/bookings.component';
 import { BlogComponent } from '../../wrapper/components/blog/blog.component';
 import { GalleryComponent } from '../../wrapper/components/gallery/gallery.component';
@@ -7,6 +8,7 @@ import { ContactComponent } from '../../wrapper/components/contact/contact.compo
 import { HomeComponent } from '../../wrapper/components/home/home.component';
 import { OurToursComponent } from 'src/app/wrapper/components/our-tours/our-tours.component';
 import { OurTeamComponent } from 'src/app/wrapper/components/about/our-team/our-team.component';
+import { PageNotFoundComponent } from 'src/app/wrapper/components/page-not-found/page-not-found.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -17,5 +19,8 @@ export const routes: Routes = [
   {path: 'gallery', component: GalleryComponent},
   {path: 'blog', component: BlogComponent},
   {path: 'contact', component: ContactComponent},
-  {path: 'bookings', component: BookingsComponent},
+  {path: 'bookings', canActivate: [AuthGuardService], component: BookingsComponent, 
+  /**children:[ {path: ':bookinglist',  component: BookingsComponent},
+]*/},
+  { path: '**', component: PageNotFoundComponent },
 ];

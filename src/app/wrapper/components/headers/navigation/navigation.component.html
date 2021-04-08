@@ -71,25 +71,25 @@
             Contact Us</a
           >
         </li>
+        <li class="nav-item">
+          <a mat-button [routerLink]="['bookings']" routerLinkActive="active">
+            My Bookings <span class="fa fa-cart-arrow-down fa-lg"></span
+          ></a>
+        </li>
       </ul>
 
       <span class="flex-spacer"></span>
-      <li class="nav-item">
-        <a mat-button routerLink="bookings" routerLinkActive="active">
-          <span class="fa fa-cart-arrow-down fa-lg"></span>
-          Bookings</a
-        >
-      </li>
 
       <!-- <form class="form-inline items-inline  p-3">
       <input class="form-control" type="search" placeholder="Location, Hotels, More" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
     </form> -->
 
-      <!-- <span class="flex-spacer"></span> -->
-
       <a mat-button class="bg-dark justify-item-end" (click)="openLoginForm()"
         ><span class="fa fa-sign-in fa-lg"></span> Login</a
+      >
+      <a mat-button class="bg-dark justify-item-end" (click)="openLogout()"
+        ><span class="fa fa-sign-out fa-lg"></span> Logout</a
       >
     </div>
   </div>

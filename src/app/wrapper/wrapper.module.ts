@@ -1,3 +1,5 @@
+import { AuthService } from './services/auth.service';
+import { AuthGuardService } from './services/auth-guard.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -12,6 +14,7 @@ import {MatCardModule} from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from '../app-routing.module'; 
 import {MatMenuModule} from '@angular/material/menu';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
@@ -25,7 +28,7 @@ import { MatListModule } from '@angular/material/list';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { CardsComponent } from './components/card/cards/cards.component';
-import { HighlightDirective } from './Directives/highlight.directive';
+import { HighlightDirective } from './directives/highlight.directive';
 import { HomeCardComponent } from './components/card/home-card/home-card.component';
 import { ContactCardComponent } from './components/card/contact-card/contact-card.component';
 import { FirstCardComponent } from './components/card/first-card/first-card.component';
@@ -41,9 +44,11 @@ import { BookingsComponent } from './components/bookings/bookings.component';
 import { Team1Component } from './components/about/our-team/team1/team1.component';
 import { Team2Component } from './components/about/our-team/team2/team2.component';
 import { Team3Component } from './components/about/our-team/team3/team3.component';
+import { BookingListComponent } from './components/bookings/booking-list/booking-list.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, ContactComponent, HeaderComponent,NavigationComponent, FooterComponent, WrapperComponent, LoginComponent, GalleryComponent, BlogComponent, CardsComponent, HighlightDirective, HomeCardComponent, ContactCardComponent, FirstCardComponent, SecondCardComponent, ThirdCardComponent, ForthCardComponent, OurToursComponent, TestimonyComponent, DestinationsComponent, WhyUsComponent, OurTeamComponent, BookingsComponent, Team1Component, Team2Component, Team3Component],
+  declarations: [HomeComponent, AboutComponent, ContactComponent, HeaderComponent,NavigationComponent, FooterComponent, WrapperComponent, LoginComponent, GalleryComponent, BlogComponent, CardsComponent, HighlightDirective, HomeCardComponent, ContactCardComponent, FirstCardComponent, SecondCardComponent, ThirdCardComponent, ForthCardComponent, OurToursComponent, TestimonyComponent, DestinationsComponent, WhyUsComponent, OurTeamComponent, BookingsComponent, Team1Component, Team2Component, Team3Component, BookingListComponent, PageNotFoundComponent],
   imports: [
     BrowserModule,
     CommonModule,
@@ -59,8 +64,10 @@ import { Team3Component } from './components/about/our-team/team3/team3.componen
     MatSidenavModule,
     MatCardModule,
     ReactiveFormsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatExpansionModule
   ],
+  providers:[AuthGuardService, AuthService],
   exports: [WrapperComponent],
   entryComponents: [
     LoginComponent

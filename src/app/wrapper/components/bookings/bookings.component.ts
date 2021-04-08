@@ -1,3 +1,5 @@
+import { Router, ActivatedRoute } from '@angular/router';
+import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookingsComponent implements OnInit {
 
-  constructor() { }
+isLoggedIn = false;
+
+  constructor(private authService:AuthService, private router: Router, private route: ActivatedRoute) { 
+    
+  }
 
   ngOnInit(): void {
+
+    this.authService.isAuthenticated().then(
+      (authenticated: boolean)=>{
+        if(authenticated){
+          this.isLoggedIn = true;
+        }
+      }
+    )
+     
+    // if(this.isLoggedIn){
+    //   this.router.navigate(['/'])
+    // }
+  
   }
+
+  // openPage(){
+  //   this.router.navigate(['/'])
+  // }
 
 }
