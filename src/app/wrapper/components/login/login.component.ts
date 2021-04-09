@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { routes } from './../../../shared/routes/routes';
 import { AuthService } from './../../services/auth.service';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
@@ -17,7 +19,7 @@ export class LoginComponent implements OnInit {
     remember: false
   };
 
-  constructor(public dialogRef: MatDialogRef<LoginComponent>, private authService: AuthService) { }
+  constructor(public dialogRef: MatDialogRef<LoginComponent>, private authService: AuthService, private routes: Router) { }
 
   ngOnInit(): void {
   }
@@ -25,6 +27,7 @@ export class LoginComponent implements OnInit {
   onSubmit(): void{
     console.log('User: ', this.user);
     this.authService.login();
+    this.routes.navigate(['/'])
     this.dialogRef.close();
     
 
