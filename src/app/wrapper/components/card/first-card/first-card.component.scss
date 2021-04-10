@@ -1,8 +1,23 @@
-// .card-wrapper {
-//   display: grid;
-//   grid-template-columns: repeat(3, 1fr);
-//   gap: 10px;
-// }
+.txt-background {
+  background-color: black;
+  opacity: 60%;
+  //z-index: -1;
+}
+
+.nopaddingmargin {
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: center;
+}
+
+.card-txt {
+  color: cyan;
+}
+
+.texthover:hover {
+  color: cyan;
+}
+
 
 .text-larger {
   font-size: 50px;
