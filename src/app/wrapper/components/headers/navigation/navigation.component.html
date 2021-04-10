@@ -86,12 +86,19 @@
       <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
     </form> -->
 
-      <a mat-button class="bg-dark justify-item-end" (click)="openLoginForm()"
+      <a
+        *ngIf="!isLoggedIn; else logout"
+        mat-button
+        class="bg-dark justify-item-end"
+        (click)="openLoginForm()"
         ><span class="fa fa-sign-in fa-lg"></span> Login</a
       >
-      <a mat-button class="bg-dark justify-item-end" (click)="openLogout()"
-        ><span class="fa fa-sign-out fa-lg"></span> Logout</a
-      >
+
+      <ng-template #logout>
+        <a mat-button class="bg-dark justify-item-end" (click)="openLogout()"
+          ><span class="fa fa-sign-out fa-lg"></span> Logout</a
+        >
+      </ng-template>
     </div>
   </div>
 </nav>

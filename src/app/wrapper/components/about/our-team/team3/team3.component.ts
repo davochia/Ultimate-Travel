@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Team } from 'src/app/shared/team';
+import { TeamService } from 'src/app/wrapper/services/team.service';
 
 @Component({
   selector: 'app-team3',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Team3Component implements OnInit {
 
-  constructor() { }
+ teams: Team[];
 
-  ngOnInit(): void {
+  constructor(private teamService:TeamService) { }
+
+   ngOnInit(): void {
+    this.teamService.getTeamThree().subscribe(team => this.teams = team);
   }
 
 }

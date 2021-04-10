@@ -11,9 +11,25 @@ import { LoginComponent } from '../../login/login.component';
 })
 export class NavigationComponent implements OnInit {
 
+  isLoggedIn = false;
+
     constructor(private dialog: MatDialog, private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
+     this.authService.isAuthenticated().then(
+       (authenticated)=>{
+         if(authenticated){
+           this.isLoggedIn = true;
+         }else{
+           this.isLoggedIn = false;
+         }
+       }
+     )
+    //  this.authService.isAuthenticated().then(
+    //    (auth) =>{
+
+    //    }
+    //  )
   }
 
   openLoginForm(){
@@ -23,8 +39,6 @@ export class NavigationComponent implements OnInit {
 
   openLogout(){
     this.authService.logout();
-      //alert("Logged Out. Redirected to home page...")
-    //this.dialog("Logged Out. Redirecting to home page...", {with: '200px', height: '200px'})
     this.router.navigate(['/'])
 
   }

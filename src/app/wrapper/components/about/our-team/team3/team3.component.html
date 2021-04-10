@@ -1,42 +1,12 @@
 <div class="d-flex flex-column align-items-center">
   <h1 class="fs-4">#3</h1>
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-    <div class="col">
+    <div class="col" *ngFor="let team of teams">
       <div class="card mx-auto card-width texthover" appHighlight>
-        <img
-          src="../../../../../../assets/person4.jpg"
-          class="img-fluid img-thumbnail"
-          alt=""
-        />
+        <img src="{{ team.picture }}" class="img-fluid img-thumbnail" alt="" />
         <div class="card-body">
-          <h2 class="card-title fw-bold nopaddingmargin">John Dow</h2>
-          <p class="card-text nopaddingmargin">Travel Agent</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card mx-auto card-width texthover" appHighlight>
-        <img
-          src="../../../../../../assets/person.jpeg.crdownload"
-          class="img-fluid img-thumbnail"
-          alt=""
-        />
-        <div class="card-body">
-          <h2 class="card-title fw-bold nopaddingmargin">John Dow</h2>
-          <p class="card-text nopaddingmargin">Travel Agent</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card mx-auto card-width texthover" appHighlight>
-        <img
-          src="../../../../../../assets/person2.jpeg"
-          class="img-fluid img-thumbnail"
-          alt=""
-        />
-        <div class="card-body">
-          <h2 class="card-title fw-bold nopaddingmargin">John Dow</h2>
-          <p class="card-text nopaddingmargin">Travel Agent</p>
+          <h2 class="card-title fw-bold nopaddingmargin">{{ team.name }}</h2>
+          <p class="card-text nopaddingmargin">{{ team.position }}</p>
         </div>
       </div>
     </div>

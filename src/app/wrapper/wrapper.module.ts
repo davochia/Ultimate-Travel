@@ -15,6 +15,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from '../app-routing.module'; 
 import {MatMenuModule} from '@angular/material/menu';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
@@ -46,6 +47,7 @@ import { Team2Component } from './components/about/our-team/team2/team2.componen
 import { Team3Component } from './components/about/our-team/team3/team3.component';
 import { BookingListComponent } from './components/bookings/booking-list/booking-list.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { TeamService } from './services/team.service';
 
 @NgModule({
   declarations: [HomeComponent, AboutComponent, ContactComponent, HeaderComponent,NavigationComponent, FooterComponent, WrapperComponent, LoginComponent, GalleryComponent, BlogComponent, CardsComponent, HighlightDirective, HomeCardComponent, ContactCardComponent, FirstCardComponent, SecondCardComponent, ThirdCardComponent, ForthCardComponent, OurToursComponent, TestimonyComponent, DestinationsComponent, WhyUsComponent, OurTeamComponent, BookingsComponent, Team1Component, Team2Component, Team3Component, BookingListComponent, PageNotFoundComponent],
@@ -65,9 +67,11 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     MatCardModule,
     ReactiveFormsModule,
     MatMenuModule,
-    MatExpansionModule
+    MatExpansionModule,
+        HttpClientModule,
+
   ],
-  providers:[AuthGuardService, AuthService],
+  providers:[AuthGuardService, AuthService, TeamService],
   exports: [WrapperComponent],
   entryComponents: [
     LoginComponent

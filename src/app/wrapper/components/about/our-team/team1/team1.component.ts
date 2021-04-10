@@ -1,3 +1,5 @@
+import { TeamService } from './../../../../services/team.service';
+import { Team } from './../../../../../shared/team';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Team1Component implements OnInit {
 
-  constructor() { }
+  teams: Team[];
+
+  constructor(private teamService:TeamService) { }
 
   ngOnInit(): void {
+    this.teamService.getTeamOne().subscribe(team => this.teams = team);
   }
 
 }

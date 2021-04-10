@@ -1,56 +1,14 @@
 <div class="d-flex flex-column align-items-center">
   <h1 class="fs-4">#2</h1>
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-    <div class="col">
+    <div class="col" *ngFor="let team of teams">
       <div class="card mx-auto card-width back-color" appHighlight>
-        <img
-          src="../../../../../../assets/person4.jpg"
-          class="card-img"
-          alt=""
-        />
+        <img src="{{ team.picture }}" class="card-img" alt="" />
         <div class="card-body">
-          <h2 class="card-title fw-bold nopaddingmargin texthover">John Dow</h2>
-          <p class="card-text nopaddingmargin card-txt">Travel Agent</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card mx-auto card-width back-color" appHighlight>
-        <img
-          src="../../../../../../assets/person.jpeg.crdownload"
-          class="card-img"
-          alt=""
-        />
-        <div class="card-body">
-          <h2 class="card-title fw-bold nopaddingmargin texthover">John Dow</h2>
-          <p class="card-text nopaddingmargin card-txt">Travel Agent</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card mx-auto card-width back-color" appHighlight>
-        <img
-          src="../../../../../../assets/person2.jpeg"
-          class="card-img"
-          alt=""
-        />
-        <div class="card-body">
-          <h2 class="card-title fw-bold nopaddingmargin texthover">John Dow</h2>
-          <p class="card-text nopaddingmargin card-txt">Travel Agent</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card mx-auto card-width back-color" appHighlight>
-        <img
-          src="../../../../../../assets/person1.jpeg"
-          class="card-img"
-          alt=""
-        />
-        <div class="card-body">
-          <h2 class="card-title fw-bold nopaddingmargin texthover">John Dow</h2>
-          <p class="card-text nopaddingmargin card-txt">Travel Agent</p>
+          <h2 class="card-title fw-bold nopaddingmargin texthover">
+            {{ team.name }}
+          </h2>
+          <p class="card-text nopaddingmargin card-txt">{{ team.position }}</p>
         </div>
       </div>
     </div>

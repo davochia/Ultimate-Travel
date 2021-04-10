@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Team } from 'src/app/shared/team';
+import { TeamService } from 'src/app/wrapper/services/team.service';
 
 @Component({
   selector: 'app-team2',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./team2.component.scss']
 })
 export class Team2Component implements OnInit {
+ teams: Team[];
 
-  constructor() { }
+  constructor(private teamService:TeamService) { }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    this.teamService.getTeamTwo().subscribe(team => this.teams = team);
   }
 
 }
