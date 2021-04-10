@@ -1,6 +1,6 @@
 import { TeamService } from './../../../../services/team.service';
-import { Team } from './../../../../../shared/team';
 import { Component, OnInit } from '@angular/core';
+import { Team } from 'src/app/shared/model/team';
 
 @Component({
   selector: 'app-team1',

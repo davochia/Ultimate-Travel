@@ -1,46 +1,51 @@
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from './../../../services/auth.service';
-import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { Component, DoCheck, OnInit, OnChanges } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { LoginComponent } from '../../login/login.component';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  styleUrls: ['./navigation.component.scss'],
 })
-export class NavigationComponent implements OnInit {
-
+export class NavigationComponent implements OnInit, DoCheck, OnChanges {
   isLoggedIn = false;
 
-    constructor(private dialog: MatDialog, private authService: AuthService, private router: Router) { }
+  constructor(
+    private dialog: MatDialog,
+    private authService: AuthService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
-  ngOnInit(): void {
-     this.authService.isAuthenticated().then(
-       (authenticated)=>{
-         if(authenticated){
-           this.isLoggedIn = true;
-         }else{
-           this.isLoggedIn = false;
-         }
-       }
-     )
-    //  this.authService.isAuthenticated().then(
-    //    (auth) =>{
+  ngOnInit(): void {}
 
-    //    }
-    //  )
+  ngOnChanges() {
+    //console.log('Changes - ' + this.isLoggedIn);
   }
 
-  openLoginForm(){
-    this.dialog.open(LoginComponent, {width: '500px', height: '450px'});
-
+  ngAfterViewInit() {
+    //console.log('After view init - ' + this.isLoggedIn);
   }
 
-  openLogout(){
+  ngDoCheck() {
+    this.authService.isAuthenticated().then((authenticated) => {
+      if (authenticated) {
+        this.isLoggedIn = true;
+      } else {
+        this.isLoggedIn = false;
+      }
+    });
+    //console.log('Do check - ' + this.isLoggedIn);
+  }
+
+  openLoginForm() {
+    this.dialog.open(LoginComponent, { width: '500px', height: '450px' });
+  }
+
+  openLogout() {
     this.authService.logout();
-    this.router.navigate(['/'])
-
+    this.router.navigate(['/']);
   }
-
 }

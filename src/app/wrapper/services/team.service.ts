@@ -3,8 +3,8 @@ import { delay } from 'rxjs/Operators';
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Team } from 'src/app/shared/team';
-import { TEAMS } from 'src/app/shared/teams';
+import { Team } from 'src/app/shared/model/team';
+import { TEAMS } from 'src/app/shared/model/teams';
 
 @Injectable({
   providedIn: 'root'
