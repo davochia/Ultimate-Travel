@@ -36,3 +36,26 @@
 .card-wh {
   max-width: 24rem;
 }
+
+
+.overlay-dark {
+  position: relative;
+}
+
+.overlay-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  display: block;
+  opacity: 0.30;
+}
+
+
+.overlay-content {
+  z-index: 99;
+  position: relative;
+}

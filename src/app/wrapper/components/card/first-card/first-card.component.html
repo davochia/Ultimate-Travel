@@ -1,10 +1,14 @@
 <div class="row">
   <div class="card-group gap-4">
-    <div class="card text-white" *ngFor="let tour of tours" appHighlight>
+    <div
+      class="card text-white overlay-dark"
+      *ngFor="let tour of tours"
+      appHighlight
+    >
       <img src="{{ tour.image }}" class="card-img h-100" alt="" />
       <div class="card-img-overlay">
         <h1 class="card-title fw-bold texthover">{{ tour.title }}</h1>
-        <h4 class="card-text">{{ tour.introduction }}</h4>
+        <p class="card-text fs-6">{{ tour.introduction }}</p>
       </div>
     </div>
   </div>

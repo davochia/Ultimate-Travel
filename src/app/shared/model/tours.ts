@@ -177,7 +177,7 @@ export const TOURS: Tour[] = [
     title: 'Holidays in the Caribbean',
     country: 'Jamaica',
     image: 'assets/caribbean1.jpg',
-    introduction: 'Experince the magic in Spain.',
+    introduction: 'Experince the magic in the Caribbean.',
     featured: true,
     destinations: [
       {
