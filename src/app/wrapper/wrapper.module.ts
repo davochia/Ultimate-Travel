@@ -26,7 +26,6 @@ import { WrapperComponent } from './wrapper.component';
 import { LoginComponent } from './components/login/login.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { BlogComponent } from './components/blog/blog.component';
-import { CardsComponent } from './components/card/cards/cards.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { HomeCardComponent } from './components/card/home-card/home-card.component';
 import { ContactCardComponent } from './components/card/contact-card/contact-card.component';
@@ -60,7 +59,6 @@ import { AuthGuardService } from './services/auth-guard.service';
     LoginComponent,
     GalleryComponent,
     BlogComponent,
-    CardsComponent,
     HighlightDirective,
     HomeCardComponent,
     ContactCardComponent,

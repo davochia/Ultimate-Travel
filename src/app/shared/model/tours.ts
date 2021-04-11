@@ -1,12 +1,13 @@
 import { Tour } from './tour';
 
-const TOURS: Tour[] = [
+export const TOURS: Tour[] = [
   {
     id: 0,
     title: 'Holidays in Greece',
     country: 'Greece',
     image: 'assets/greece.jpg',
     introduction: 'Experince the magic in Greek Islands.',
+    featured: true,
     destinations: [
       {
         places: 'Crete',
@@ -130,6 +131,7 @@ const TOURS: Tour[] = [
     country: 'Spain',
     image: 'assets/spain3.jpg',
     introduction: 'Experince the magic in Spain.',
+    featured: true,
     destinations: [
       {
         places: 'Mallorca',
@@ -176,6 +178,7 @@ const TOURS: Tour[] = [
     country: 'Jamaica',
     image: 'assets/caribbean1.jpg',
     introduction: 'Experince the magic in Spain.',
+    featured: true,
     destinations: [
       {
         places: 'Carribean',
